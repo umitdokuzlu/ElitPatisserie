@@ -1,0 +1,35 @@
+﻿@model List<Contact>
+<section class="section" style="margin-top:50px;padding:60px 0px;" id="reservation">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 align-self-center">
+                <div class="left-text-content">
+                    <div class="section-heading">
+                        <h6>İletişim</h6>
+                        <h2>Gelmeden önce bizi arayıp rezervasyon yapabilirsiniz veya Kafemize gelebilirsiniz</h2>
+                    </div>
+                    <p>Sizlere en iyi hizmeti sunmak istiyoruz bizimle iletişime geçerek rezervasyon yapabilirsiniz..</p>
+                    <div class="row">
+                        @foreach (var item in Model)
+                        {
+                            <div class="col-lg-6" style="margin-top:45px;">
+                                <div class="phone" style="height:100%;margin-bottom:0px;">
+                                    <i class="fa fa-phone"></i>
+                                    <h4>Telefon Numaralarımız</h4>
+                                    <span><a href="#">@item.Phone1</a><br><a href="#">@item.Phone2</a></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-6" style="margin-top:45px;">
+                                <div class="message" style="height:100%">
+                                    <i class="fa fa-envelope"></i>
+                                    <h4>Adresimiz</h4>
+                                    <span><a href="#">@item.Address</a><br></span>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,38 @@
+﻿@model List<Chef>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!-- Page Heading -->
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Ustalar:</h1>
+</div>
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Resim</th>
+            <th scope="col">Adı ve Soyadı</th>
+            <th scope="col">Unvanı</th>
+            <th scope="col">Facebook</th>
+            <th scope="col">Twitter</th>
+            <th scope="col">İnstagram</th>
+            <th scope="col">Güncelle</th>
+        </tr>
+    </thead>
+    <tbody>
+            @foreach (var item in Model)
+        {
+            <tr>
+                <th scope="row"><img src="~/ElitCafe/assets/images/@item.Picture" style="width:65px; height:65px;" /></th>
+                <th scope="row">@item.Name</th>
+                <td>@item.Title</td>
+                <td>@item.FacebookUrl</td>
+                <td>@item.TwitterUrl</td>
+                <td>@item.InstagramUrl</td>
+                <td><a href="/Chef/ChefUpdate/@item.Id" class="btn btn-outline-warning">Güncelle</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+

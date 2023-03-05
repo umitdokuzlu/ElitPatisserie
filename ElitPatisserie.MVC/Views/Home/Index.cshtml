@@ -1,0 +1,126 @@
+﻿    <!-- ***** Header Area Start ***** -->
+<header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a asp-controller="Home" asp-action="Index" class="logo">
+                        <img src="~/ElitCafe/assets/images/klassy-logo.png" align="klassy cafe html template">
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                        <li class="scroll-to-section"><a href="#top" class="active">Ana Sayfa</a></li>
+                        <li class="scroll-to-section"><a href="#about">Hakkımızda</a></li>
+
+                        <!--
+                            <li class="submenu">
+                                <a href="javascript:;">Drop Down</a>
+                                <ul>
+                                    <li><a href="#">Drop Down Page 1</a></li>
+                                    <li><a href="#">Drop Down Page 2</a></li>
+                                    <li><a href="#">Drop Down Page 3</a></li>
+                                </ul>
+                            </li>
+                        -->
+                        <li class="scroll-to-section"><a href="#menu">spesiyaller</a></li>
+                        <li class="scroll-to-section"><a href="#chefs">Şefler</a></li>
+                        <!-- <li class=""><a rel="sponsored" href="https://templatemo.com" target="_blank">External URL</a></li> -->
+                        <li class="scroll-to-section"><a href="#reservation">İletişim</a></li>
+                        <li class="scroll-to-section"><a asp-controller="MenuList" asp-action="Index">Menüye Git</a></li>
+                    </ul>
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- ***** Header Area End ***** -->
+<!-- ***** Main Banner Area Start ***** -->
+@await Component.InvokeAsync("HomeList")
+    <!-- ***** Main Banner Area End ***** -->
+
+    <!-- ***** About Area Starts ***** -->
+    <section class="section" style="padding-top:50px;" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-xs-12">
+                    <div class="left-text-content">
+                        <div class="section-heading">
+                            <h6>Hakkımızda</h6>
+                            <h2>Size Mükemmel Bir Tat Bırakmak İçin</h2>
+                        </div>
+                        <p>Klassy Cafe is one of the best <a href="https://templatemo.com/tag/restaurant" target="_blank" rel="sponsored">restaurant HTML templates</a> with Bootstrap v4.5.2 CSS framework. You can download and feel free to use this website template layout for your restaurant business. You are allowed to use this template for commercial purposes. <br><br>You are NOT allowed to redistribute the template ZIP file on any template donwnload website. Please contact us for more information.</p>
+                        <div class="row">
+                            <div class="col-4">
+                                <img src="~/ElitCafe/assets/images/about-thumb-01.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img src="~/ElitCafe/assets/images/about-thumb-02.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img src="~/ElitCafe/assets/images/about-thumb-03.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-xs-12">
+                    <div class="right-content">
+                        <div class="thumb">
+                            <a rel="nofollow" href="http://youtube.com"><i class="fa fa-play"></i></a>
+                            <img src="~/ElitCafe/assets/images/about-video-bg.jpg" style="height:100%;width:100%;" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** About Area Ends ***** -->
+
+    <!-- ***** Menu Area Starts ***** -->
+@await Component.InvokeAsync("MenuSliderList")
+    <!-- ***** Menu Area Ends ***** -->
+
+    <!-- ***** Chefs Area Starts ***** -->
+@await Component.InvokeAsync("ChefList")
+    <!-- ***** Chefs Area Ends ***** -->
+
+    <!-- ***** Reservation Us Area Starts ***** -->
+@await Component.InvokeAsync("ContactList")
+    <!-- ***** Reservation Area Ends ***** -->
+<!-- ***** Footer Start ***** -->
+<footer style="margin-top:10px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-xs-12">
+                <div class="right-text-content">
+                    <ul class="social-icons">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="logo">
+                    <a asp-controller="Home" asp-action="Index"><img src="~/ElitCafe/assets/images/white-logo.png" alt=""></a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-xs-12">
+                <div class="left-text-content">
+                    <p>
+                       <span> Developer:umitdokuzlu
+                            <br /> <a href="~/Login/Index/" style="color:white;">Kullanıcı:Admin Paneli</a>
+                        </span>
+                        
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

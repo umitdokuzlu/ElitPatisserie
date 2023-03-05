@@ -1,0 +1,54 @@
+﻿@model List<Product>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- ***** Menu Area Starts ***** -->
+<section class="section" style="margin-top:24px;padding-top:0px;" id="offers">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 offset-lg-4 text-center">
+                <div class="section-heading">
+                    <h6>Elit Pasta & Fırın & Cafe</h6>
+                    <h2>Bu Hafta'nın Özel Tavsiyeleri</h2>
+                    <a class="btn btn-outline-danger" asp-controller="Home" asp-action="Index">Web Sitemizi Ziyaret Edin</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="row" id="tabs">
+                    <div class="col-lg-12">
+                        <div class="heading-tabs">
+                            <div class="row">
+                                <div class="col-lg-6 offset-lg-3">
+                                    <ul>
+                                        <li style="margin:0px 0px;"><a href='#tabs-1'><img src="~/ElitCafe/assets/images/tab-icon-01.png" alt="">Kahvaltı</a></li>
+                                        <li style="margin:0px 0px;"><a href='#tabs-2'><img src="~/ElitCafe/assets/images/tab-icon-02.png" alt="">Pasta</a></li>
+                                        <li style="margin:0px 0px;"><a href='#tabs-3'><img src="~/ElitCafe/assets/images/tab-icon-03.png" alt="">Tatlı</a></li>
+                                        <li style="margin:0px 0px;"><a href='#tabs-4'><img src="~/ElitCafe/assets/images/tab-icon-03.png" alt="">Aperatif</a></li>
+                                        <li style="margin:0px 0px;"><a href='#tabs-5'><img src="~/ElitCafe/assets/images/tab-icon-03.png" alt="">Baklava</a></li>
+                                        <li style="margin:0px 0px;"><a href='#tabs-6'><img src="~/ElitCafe/assets/images/tab-icon-03.png" alt="">İçecekler</a></li>
+                                    </ul>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <section class='tabs-content'>
+                            @await Component.InvokeAsync("BreakfastList")
+                            @await Component.InvokeAsync("CakeList")
+                            @await Component.InvokeAsync("DessertList")
+                            @await Component.InvokeAsync("CollationList")
+                            @await Component.InvokeAsync("BaklavaList")
+                            @await Component.InvokeAsync("DrinkList")
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ***** Chefs Area Ends ***** --> 

@@ -1,0 +1,32 @@
+﻿@model List<MenuSlider>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!-- Page Heading -->
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Anasayfadaki Ürünler:</h1>
+</div>
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Ürün Adı</th>
+            <th scope="col">Ürün Açıklaması</th>
+            <th scope="col">Ürün Fiyatı</th>
+            <th scope="col">Düzenle</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th scope="row">@item.Name</th>
+                <td>@item.Description.Substring(0,30)</td>
+                <td>@item.Price</td>
+                <td><a href="/MenuSlider/MenuSliderUpdate/@item.Id" class="btn btn-outline-warning">Güncelle</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+

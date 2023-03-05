@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="wwwroot\ElitCafe\.vs\VSWorkspaceState.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\ElitCafe\.vs\slnx.sqlite" />
+    <None Include="wwwroot\ElitCafe\.vs\templatemo_558_klassy_cafe\config\applicationhost.config" />
+    <None Include="wwwroot\ElitCafe\.vs\templatemo_558_klassy_cafe\FileContentIndex\1433ca95-ba05-4290-a608-7f3e676d32de.vsidx" />
+    <None Include="wwwroot\ElitCafe\.vs\templatemo_558_klassy_cafe\FileContentIndex\6ad20f03-8a4e-49ce-94c1-b731499614b0.vsidx" />
+    <None Include="wwwroot\ElitCafe\.vs\templatemo_558_klassy_cafe\FileContentIndex\read.lock" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.2.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.13" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.13" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.13">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.13" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.13">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ElitPatisserie.Business\ElitPatisserie.Business.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\Dtos\" />
+    <Folder Include="wwwroot\ElitCafe\.vs\templatemo_558_klassy_cafe\FileContentIndex\merges\" />
+    <Folder Include="wwwroot\ElitCafe\.vs\templatemo_558_klassy_cafe\v17\" />
+  </ItemGroup>
+
+</Project>
